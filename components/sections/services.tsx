@@ -12,7 +12,7 @@ const ServicesSection = () => {
   const services = [
     {
       icon: ShieldAlert,
-      title: "Project Advisory Services",
+      title: "Quantity Survey & Project Advisory Services",
       description:
         "strategic guidance across planning, procurement, contracts, risk, cost and performance.",
       color: "bg-primary",
@@ -71,6 +71,13 @@ const ServicesSection = () => {
       description: 'Strategic, sustainable, and technically robust infrastructure design solutions',
       color: 'bg-primary',
       slug: 'infrastructure-design'
+    },
+    {
+      icon: ChartArea,
+      title: "Specialist Services",
+      description: 'Insolvency support, loss adjusting, commercial audits, and contract consultancy for construction and engineering industries.',
+      color: 'bg-primary',
+      slug: 'specialist-services'
     }
   ];
   useEffect(() => {

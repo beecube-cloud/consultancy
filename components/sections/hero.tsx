@@ -306,7 +306,7 @@ export function HeroSliderExample() {
     <HeroSection
       variant="slider"
       brandLabel="Esthoj Consulting"
-      brandIcon="/hero/dot.svg"
+      brandIcon="/assets/logo.svg"
       heading="Transforming Projects. Delivering Solutions."
       description="Esthoj Consulting provides expert advisory services that help clients navigate complex construction and infrastructure challenges. From project planning and risk management to claims consultancy and expert witness support, we deliver strategic insights that drive successful project outcomes."
       buttons={divisionButtons}
