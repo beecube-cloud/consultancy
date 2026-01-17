@@ -1,6 +1,6 @@
 export const servicesData = {
  "project-advisory": {
-  title: "Project Advisory Services",
+  title: "Quantity Survey & Project Advisory Services",
   description:
     "Project planning, procurement strategy, contract selection, cost and performance advisory.",
   content: `
