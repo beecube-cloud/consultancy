@@ -34,26 +34,23 @@ export default function CustomizableFooter({
     {
       title: 'Platform',
       links: [
-        { name: 'Solutions', href: '/#' },
-        { name: 'How it works', href: '/#' },
-        { name: 'Pricing', href: 'https://wa.me/2347033538311' },
+        { name: 'Solutions', href: '/services' },
+        { name: 'Pricing', href: 'https://wa.me/08140989555' },
       ],
     },
     {
       title: 'Company',
       links: [
         { name: 'About', href: '/about' },
-        { name: 'Our Mission', href: '/#' },
-        { name: 'Careers', href: '/#', },
-        { name: 'Contact', href: '/#' },
+        { name: 'Our Mission', href: '/about' },
+        { name: 'Contact', href: '/contact' },
       ],
     },
     {
       title: 'Resources',
       links: [
         { name: 'Blog', href: '/#' },
-        { name: 'Help Center', href: '/#' },
-        { name: 'Support', href: '/#' },
+        { name: 'Support', href: '/contact' },
       ],
     },
   ],
