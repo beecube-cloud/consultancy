@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { projectsList } from "@/lib/consts";
+import { projectsList } from "@/lib/const";
 import ProjectGallery from "@/components/sections/projects/projectGallery";
 import SectionHeader from "@/components/sections/headerSection";
 
