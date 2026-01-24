@@ -10,10 +10,10 @@ export interface HeroButton {
     src: string;
     alt: string;
     position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-    width?: string;
     speed?: number;
+    width?: string;
   }
-  
+
   export interface HeroSectionProps {
     variant?: 'parallax' | 'single-image' | 'video' | 'slider'; // Added 'slider'
     brandLabel?: string;
@@ -109,22 +109,3 @@ export interface HeroButton {
     animationDuration?: number;
     className?: string;
   }
-
-
-  export interface SideImageCard {
-    icon?: string;
-    text: string;
-    href?: string;
-  }
-  
-  export interface SideImageConfig {
-    src: string;
-    alt: string;
-    card?: SideImageCard;
-    decorativeLines?: boolean;
-  }
-  
-  export interface ExtendedHeroSectionProps extends HeroSectionProps {
-    variant?: 'single-image' | 'parallax' | 'video' | 'slider';
-    sideImage?: SideImageConfig;
-  } 

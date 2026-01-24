@@ -21,7 +21,7 @@ export default function NavbarScrollWithLogo() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Projects', href: 'https://construction.esthoj.com/projects' },
+    { name: 'Projects', href: '/projects' },
   ];
 
   useEffect(() => {
@@ -43,13 +43,21 @@ export default function NavbarScrollWithLogo() {
           {/* Logo with Image */}
           <Link href="/" className="flex items-center space-x-2 z-10">
             <Image
-              src="/assets/logo.svg" 
+              src="/assets/logo.svg"
               alt="Esthoj Logo"
               width={40}
               height={40}
               className="object-contain"
               priority
             />
+            <div className="flex flex-col">
+              <span className="text-white text-xl font-bold leading-tight">
+                Esthoj
+              </span>
+              <span className="text-white/60 text-[8px] font-semibold uppercase tracking-widest -mt-0.5">
+                Consultancy
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
