@@ -133,7 +133,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         isItemVisible
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-8"
-      }`}
+      }`} 
       style={{
         transitionDelay: `${index * (isMobile ? 100 : 150)}ms`,
       }}

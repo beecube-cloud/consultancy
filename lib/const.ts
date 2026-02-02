@@ -446,6 +446,31 @@ export const parallaxImages: ParallaxImage[] = [
       ],
     },
     
+    {
+      slug: 'mtn_abuja-typical_toilet',
+      title: "MTN Abuja Typical Toilet",
+      date: "25th February, 2025",
+      description: 'MTN Abuja Typical Toilet',
+      images: [
+        "/assets/projects/mtn_abuja-typical_toilet/image1.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image2.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image3.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image4.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image5.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image6.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image7.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image8.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image9.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image10.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image11.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image12.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image13.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image14.webp",
+        "/assets/projects/mtn_abuja-typical_toilet/image15.webp",
+      ],
+
+    }
+    
 
   ];
 
