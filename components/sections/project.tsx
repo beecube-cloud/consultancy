@@ -19,6 +19,7 @@ interface ProjectsSectionProps {
   projects?: Project[];
   maxItems?: number;
   className?: string;
+  showOnLoad?: boolean;
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({
@@ -29,8 +30,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   projects,
   maxItems,
   className = "",
+  showOnLoad = false,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(showOnLoad);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -49,42 +51,55 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         setIsMobile(window.innerWidth < 768);
       }
     };
-    
+
     checkMobile();
-    
+
     // Add resize listener
     const handleResize = () => checkMobile();
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // Animate items with stagger effect
-          finalProjects.forEach((_, index) => {
-            const delay = isMobile ? index * 100 : index * 150;
-            setTimeout(() => {
-              setVisibleItems((prev) => [...prev, index]);
-            }, delay);
-          });
-        }
-      },
-      { threshold: 0.1 }
-    );
+    const animateItems = () => {
+      finalProjects.forEach((_, index) => {
+        const delay = isMobile ? index * 100 : index * 150;
+        setTimeout(() => {
+          setVisibleItems((prev) => [...prev, index]);
+        }, delay);
+      });
+    };
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (showOnLoad) {
+      animateItems();
+    } else {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            animateItems();
+          }
+        },
+        { threshold: 0.1 }
+      );
+
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
+      }
+
+      return () => {
+        observer.disconnect();
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
     }
 
     return () => {
-      observer.disconnect();
       if (typeof window !== 'undefined') {
         window.removeEventListener('resize', handleResize);
       }
     };
-  }, [finalProjects.length, isMobile]);
+  }, [finalProjects.length, isMobile, showOnLoad]);
 
   return (
     <div
