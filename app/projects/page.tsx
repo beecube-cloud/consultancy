@@ -12,9 +12,10 @@ function ProjectsPage() {
         title="Our Projects"
         description="We deliver projects of all sizes — from local upgrades to multi-million Naira developments. Below are selected projects and photo highlights. Click any project for details, contract value and gallery."
       />
-      <ProjectsSection 
+      <ProjectsSection
         title=""
         showButton={false}
+        showOnLoad
         projects={projectsList as Project[]}
         className="min-h-screen"
       />
