@@ -158,7 +158,7 @@ export const parallaxImages: ParallaxImage[] = [
       slug: 'enclave-estate-asokoro',
       title: "Enclave Estate Asokoro, Abuja",
       date: "10th March, 2025",
-      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      description: '5 bedroom duplexes of 42 units',
       images: [
         "/assets/projects/enclave/image1.webp",
         "/assets/projects/enclave/image2.webp",
@@ -193,7 +193,7 @@ export const parallaxImages: ParallaxImage[] = [
       slug: 'abia',
       title: "Abia Project",
       date: "25th February, 2025",
-      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      description: 'Country Home mansion for a private client',
       images: [
         "/assets/projects/abia1/image1.webp",
         "/assets/projects/abia1/image2.webp",
@@ -209,7 +209,7 @@ export const parallaxImages: ParallaxImage[] = [
       slug: 'bima',
       title: "Bima Project",
       date: "25th February, 2025",
-      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      description: '7 bedroom mansion with Cinema',
       images: [
         "/assets/projects/bima/image1.webp",
         "/assets/projects/bima/image2.webp",
@@ -448,9 +448,9 @@ export const parallaxImages: ParallaxImage[] = [
     
     {
       slug: 'mtn_abuja-typical_toilet',
-      title: "MTN Abuja Typical Toilet",
+      title: "MTN Abuja Regional Office design proposal",
       date: "25th February, 2025",
-      description: 'MTN Abuja Typical Toilet',
+      description: 'MTN Abuja Regional Office design proposal',
       images: [
         "/assets/projects/mtn_abuja-typical_toilet/image1.webp",
         "/assets/projects/mtn_abuja-typical_toilet/image2.webp",
