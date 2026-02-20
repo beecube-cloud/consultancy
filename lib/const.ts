@@ -1,5 +1,140 @@
 import { FAQItem, HeroButton, ParallaxImage, TeamMember } from "./types";
 
+export interface AbiaRoom {
+  id: string;
+  label: string;
+  slug: string;
+  images: string[];
+}
+
+export const abiaInteriorsRooms: AbiaRoom[] = [
+  {
+    id: "great-room",
+    label: "Great Room",
+    slug: "great-room",
+    images: [
+      "/assets/projects/great-room/image1.webp",
+      "/assets/projects/great-room/image2.webp",
+      "/assets/projects/great-room/image3.webp",
+      "/assets/projects/great-room/image4.webp",
+      "/assets/projects/great-room/image5.webp",
+      "/assets/projects/great-room/image6.webp",
+      "/assets/projects/great-room/image7.webp",
+      "/assets/projects/great-room/image8.webp",
+      "/assets/projects/great-room/image9.webp",
+      "/assets/projects/great-room/image10.webp",
+      "/assets/projects/great-room/image11.webp",
+      "/assets/projects/great-room/image12.webp",
+      "/assets/projects/great-room/image13.webp",
+      "/assets/projects/great-room/image14.webp",
+      "/assets/projects/great-room/image15.webp",
+      "/assets/projects/great-room/image16.webp",
+      "/assets/projects/great-room/image17.webp",
+    ],
+  },
+  {
+    id: "kitchen-3d",
+    label: "Kitchen",
+    slug: "kitchen-3d",
+    images: [
+      "/assets/projects/kitchen-3d/image1.webp",
+      "/assets/projects/kitchen-3d/image2.webp",
+      "/assets/projects/kitchen-3d/image3.webp",
+      "/assets/projects/kitchen-3d/image4.webp",
+      "/assets/projects/kitchen-3d/image5.webp",
+      "/assets/projects/kitchen-3d/image6.webp",
+      "/assets/projects/kitchen-3d/image7.webp",
+      "/assets/projects/kitchen-3d/image8.webp",
+      "/assets/projects/kitchen-3d/image9.webp",
+    ],
+  },
+  {
+    id: "dinner-3d",
+    label: "Dining Room",
+    slug: "dinner-3d",
+    images: [
+      "/assets/projects/dinner-3d/image1.webp",
+      "/assets/projects/dinner-3d/image2.webp",
+      "/assets/projects/dinner-3d/image3.webp",
+      "/assets/projects/dinner-3d/image4.webp",
+      "/assets/projects/dinner-3d/image5.webp",
+      "/assets/projects/dinner-3d/image6.webp",
+      "/assets/projects/dinner-3d/image7.webp",
+      "/assets/projects/dinner-3d/image8.webp",
+      "/assets/projects/dinner-3d/image9.webp",
+      "/assets/projects/dinner-3d/image10.webp",
+      "/assets/projects/dinner-3d/image11.webp",
+    ],
+  },
+  {
+    id: "bedroom-floor",
+    label: "Bedroom",
+    slug: "bedroom-floor",
+    images: [
+      "/assets/projects/bedroom-floor/image1.webp",
+      "/assets/projects/bedroom-floor/image2.webp",
+      "/assets/projects/bedroom-floor/image3.webp",
+      "/assets/projects/bedroom-floor/image4.webp",
+      "/assets/projects/bedroom-floor/image5.webp",
+      "/assets/projects/bedroom-floor/image6.webp",
+    ],
+  },
+  {
+    id: "bedroom-bathroom-1st",
+    label: "Bedroom Bathroom",
+    slug: "bedroom-bathroom-1st",
+    images: [
+      "/assets/projects/bedroom-bathroom-1st/image1.webp",
+      "/assets/projects/bedroom-bathroom-1st/image2.webp",
+      "/assets/projects/bedroom-bathroom-1st/image3.webp",
+      "/assets/projects/bedroom-bathroom-1st/image4.webp",
+      "/assets/projects/bedroom-bathroom-1st/image5.webp",
+      "/assets/projects/bedroom-bathroom-1st/image6.webp",
+      "/assets/projects/bedroom-bathroom-1st/image7.webp",
+      "/assets/projects/bedroom-bathroom-1st/image8.webp",
+    ],
+  },
+  {
+    id: "master-madam-bathroom",
+    label: "Master Bathroom",
+    slug: "master-madam-bathroom",
+    images: [
+      "/assets/projects/master-madam-bathroom/image1.webp",
+      "/assets/projects/master-madam-bathroom/image2.webp",
+      "/assets/projects/master-madam-bathroom/image3.webp",
+      "/assets/projects/master-madam-bathroom/image4.webp",
+      "/assets/projects/master-madam-bathroom/image5.webp",
+      "/assets/projects/master-madam-bathroom/image6.webp",
+      "/assets/projects/master-madam-bathroom/image7.webp",
+      "/assets/projects/master-madam-bathroom/image8.webp",
+      "/assets/projects/master-madam-bathroom/image9.webp",
+    ],
+  },
+  {
+    id: "guess-bathroom",
+    label: "Guest Bathroom",
+    slug: "guess-bathroom",
+    images: [
+      "/assets/projects/guess-bathroom/image1.webp",
+      "/assets/projects/guess-bathroom/image2.webp",
+      "/assets/projects/guess-bathroom/image3.webp",
+      "/assets/projects/guess-bathroom/image4.webp",
+      "/assets/projects/guess-bathroom/image5.webp",
+    ],
+  },
+  {
+    id: "guest-toilet",
+    label: "Guest Toilet",
+    slug: "guest-toilet",
+    images: [
+      "/assets/projects/guest-toilet/image1.webp",
+      "/assets/projects/guest-toilet/image2.webp",
+      "/assets/projects/guest-toilet/image3.webp",
+      "/assets/projects/guest-toilet/image4.webp",
+    ],
+  },
+];
+
 export const parallaxImages: ParallaxImage[] = [
     {
       src: '/assets/hero/image1.svg',
@@ -472,65 +607,6 @@ export const parallaxImages: ParallaxImage[] = [
     },
 
     {
-      slug: 'guest-toilet',
-      title: "Guest Toilet",
-      date: "19th February, 2026",
-      description: 'Guest toilet interior design',
-      images: [
-        "/assets/projects/guest-toilet/image1.webp",
-        "/assets/projects/guest-toilet/image2.webp",
-        "/assets/projects/guest-toilet/image3.webp",
-        "/assets/projects/guest-toilet/image4.webp",
-      ],
-    },
-
-    {
-      slug: 'bedroom-floor',
-      title: "Bedroom Floor",
-      date: "19th February, 2026",
-      description: 'Bedroom floor interior design',
-      images: [
-        "/assets/projects/bedroom-floor/image1.webp",
-        "/assets/projects/bedroom-floor/image2.webp",
-        "/assets/projects/bedroom-floor/image3.webp",
-        "/assets/projects/bedroom-floor/image4.webp",
-        "/assets/projects/bedroom-floor/image5.webp",
-        "/assets/projects/bedroom-floor/image6.webp",
-      ],
-    },
-
-    {
-      slug: 'bedroom-bathroom-1st',
-      title: "Bedroom Bathroom 1st",
-      date: "19th February, 2026",
-      description: 'First floor bedroom bathroom interior design',
-      images: [
-        "/assets/projects/bedroom-bathroom-1st/image1.webp",
-        "/assets/projects/bedroom-bathroom-1st/image2.webp",
-        "/assets/projects/bedroom-bathroom-1st/image3.webp",
-        "/assets/projects/bedroom-bathroom-1st/image4.webp",
-        "/assets/projects/bedroom-bathroom-1st/image5.webp",
-        "/assets/projects/bedroom-bathroom-1st/image6.webp",
-        "/assets/projects/bedroom-bathroom-1st/image7.webp",
-        "/assets/projects/bedroom-bathroom-1st/image8.webp",
-      ],
-    },
-
-    {
-      slug: 'guess-bathroom',
-      title: "Guest Bathroom",
-      date: "19th February, 2026",
-      description: 'Guest bathroom interior design',
-      images: [
-        "/assets/projects/guess-bathroom/image1.webp",
-        "/assets/projects/guess-bathroom/image2.webp",
-        "/assets/projects/guess-bathroom/image3.webp",
-        "/assets/projects/guess-bathroom/image4.webp",
-        "/assets/projects/guess-bathroom/image5.webp",
-      ],
-    },
-
-    {
       slug: 'ceo-office',
       title: "CEO Office",
       date: "19th February, 2026",
@@ -544,44 +620,6 @@ export const parallaxImages: ParallaxImage[] = [
     },
 
     {
-      slug: 'master-madam-bathroom',
-      title: "Master Madam Bathroom",
-      date: "19th February, 2026",
-      description: 'Master madam bathroom interior design',
-      images: [
-        "/assets/projects/master-madam-bathroom/image1.webp",
-        "/assets/projects/master-madam-bathroom/image2.webp",
-        "/assets/projects/master-madam-bathroom/image3.webp",
-        "/assets/projects/master-madam-bathroom/image4.webp",
-        "/assets/projects/master-madam-bathroom/image5.webp",
-        "/assets/projects/master-madam-bathroom/image6.webp",
-        "/assets/projects/master-madam-bathroom/image7.webp",
-        "/assets/projects/master-madam-bathroom/image8.webp",
-        "/assets/projects/master-madam-bathroom/image9.webp",
-      ],
-    },
-
-    {
-      slug: 'dinner-3d',
-      title: "Dinner 3D",
-      date: "19th February, 2026",
-      description: 'Dining room 3D interior design',
-      images: [
-        "/assets/projects/dinner-3d/image1.webp",
-        "/assets/projects/dinner-3d/image2.webp",
-        "/assets/projects/dinner-3d/image3.webp",
-        "/assets/projects/dinner-3d/image4.webp",
-        "/assets/projects/dinner-3d/image5.webp",
-        "/assets/projects/dinner-3d/image6.webp",
-        "/assets/projects/dinner-3d/image7.webp",
-        "/assets/projects/dinner-3d/image8.webp",
-        "/assets/projects/dinner-3d/image9.webp",
-        "/assets/projects/dinner-3d/image10.webp",
-        "/assets/projects/dinner-3d/image11.webp",
-      ],
-    },
-
-    {
       slug: 'conference-room',
       title: "Conference Room",
       date: "19th February, 2026",
@@ -591,24 +629,6 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/conference-room/image2.webp",
         "/assets/projects/conference-room/image3.webp",
         "/assets/projects/conference-room/image4.webp",
-      ],
-    },
-
-    {
-      slug: 'kitchen-3d',
-      title: "Kitchen 3D",
-      date: "19th February, 2026",
-      description: 'Kitchen 3D interior design',
-      images: [
-        "/assets/projects/kitchen-3d/image1.webp",
-        "/assets/projects/kitchen-3d/image2.webp",
-        "/assets/projects/kitchen-3d/image3.webp",
-        "/assets/projects/kitchen-3d/image4.webp",
-        "/assets/projects/kitchen-3d/image5.webp",
-        "/assets/projects/kitchen-3d/image6.webp",
-        "/assets/projects/kitchen-3d/image7.webp",
-        "/assets/projects/kitchen-3d/image8.webp",
-        "/assets/projects/kitchen-3d/image9.webp",
       ],
     },
 
@@ -642,28 +662,12 @@ export const parallaxImages: ParallaxImage[] = [
     },
 
     {
-      slug: 'great-room',
-      title: "Great Room",
+      slug: 'abia-private-mansion-interiors',
+      title: "Abia Private Mansion Interiors",
       date: "19th February, 2026",
-      description: 'Great room interior design',
+      description: 'Interior design for Abia private mansion — featuring the great room, kitchen, dining room, bedrooms, and bathrooms',
       images: [
         "/assets/projects/great-room/image1.webp",
-        "/assets/projects/great-room/image2.webp",
-        "/assets/projects/great-room/image3.webp",
-        "/assets/projects/great-room/image4.webp",
-        "/assets/projects/great-room/image5.webp",
-        "/assets/projects/great-room/image6.webp",
-        "/assets/projects/great-room/image7.webp",
-        "/assets/projects/great-room/image8.webp",
-        "/assets/projects/great-room/image9.webp",
-        "/assets/projects/great-room/image10.webp",
-        "/assets/projects/great-room/image11.webp",
-        "/assets/projects/great-room/image12.webp",
-        "/assets/projects/great-room/image13.webp",
-        "/assets/projects/great-room/image14.webp",
-        "/assets/projects/great-room/image15.webp",
-        "/assets/projects/great-room/image16.webp",
-        "/assets/projects/great-room/image17.webp",
       ],
     },
   ];
