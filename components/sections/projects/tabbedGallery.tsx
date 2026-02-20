@@ -3,9 +3,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectGallery from "./projectGallery";
-import { AbiaRoom } from "@/lib/const";
+interface Room {
+  id: string;
+  label: string;
+  slug: string;
+  images: string[];
+}
 
-export default function TabbedGallery({ rooms }: { rooms: AbiaRoom[] }) {
+export default function TabbedGallery({ rooms }: { rooms: Room[] }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
