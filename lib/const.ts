@@ -107,7 +107,6 @@ export const abiaInteriorsRooms: AbiaRoom[] = [
     label: "Dining Room",
     slug: "dinner-3d",
     images: [
-      "/assets/projects/dinner-3d/image1.webp",
       "/assets/projects/dinner-3d/image2.webp",
       "/assets/projects/dinner-3d/image3.webp",
       "/assets/projects/dinner-3d/image4.webp",
