@@ -682,6 +682,38 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/great-room/image1.webp",
       ],
     },
+
+    {
+      slug: 'anambra',
+      title: "Anambra Project",
+      date: "28th February, 2026",
+      description: 'Anambra construction project',
+      images: [
+        "/assets/projects/anambra/image1.webp",
+        "/assets/projects/anambra/image2.webp",
+        "/assets/projects/anambra/image3.webp",
+        "/assets/projects/anambra/image4.webp",
+        "/assets/projects/anambra/image5.webp",
+        "/assets/projects/anambra/image6.webp",
+        "/assets/projects/anambra/image7.webp",
+        "/assets/projects/anambra/image8.webp",
+        "/assets/projects/anambra/image9.webp",
+        "/assets/projects/anambra/image10.webp",
+        "/assets/projects/anambra/image11.webp",
+        "/assets/projects/anambra/image12.webp",
+        "/assets/projects/anambra/image13.webp",
+        "/assets/projects/anambra/image14.webp",
+        "/assets/projects/anambra/image15.webp",
+        "/assets/projects/anambra/image16.webp",
+        "/assets/projects/anambra/image17.webp",
+        "/assets/projects/anambra/image18.webp",
+        "/assets/projects/anambra/image19.webp",
+        "/assets/projects/anambra/image20.webp",
+        "/assets/projects/anambra/image21.webp",
+        "/assets/projects/anambra/image22.webp",
+        "/assets/projects/anambra/image23.webp",
+      ],
+    },
   ];
 
 
