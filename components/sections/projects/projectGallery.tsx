@@ -1,12 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
+const INITIAL = 10; // shown immediately
+const BATCH = 10; // revealed per scroll / click
+
 export default function ProjectGallery({ images }: { images: string[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [visibleCount, setVisibleCount] = useState(INITIAL);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  const hasMore = visibleCount < images.length;
+  const loadMore = () =>
+    setVisibleCount((c) => Math.min(c + BATCH, images.length));
+
+  // Auto-reveal the next batch when the sentinel scrolls into view.
+  useEffect(() => {
+    if (!hasMore || !sentinelRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) loadMore();
+      },
+      { rootMargin: "300px" } // start loading a bit before it's visible
+    );
+    observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, [hasMore, visibleCount]);
 
   const next = () => {
     if (activeIndex === null) return;
@@ -31,38 +53,41 @@ export default function ProjectGallery({ images }: { images: string[] }) {
     return () => window.removeEventListener("keydown", handler);
   }, [activeIndex]);
 
-
-
-
-
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {images.map((img, i) => (
+        {images.slice(0, visibleCount).map((img, i) => (
           <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
+            key={img}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: (i % BATCH) * 0.08 }}
             className="relative group cursor-pointer overflow-hidden rounded-xl h-64 shadow-md hover:shadow-xl"
             onClick={() => setActiveIndex(i)}
           >
-            <motion.div
-              className="w-full h-full"
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              <Image
-                src={img}
-                alt={`Gallery Image ${i + 1}`}
-                fill
-                className="object-cover"
-              />
-            </motion.div>
+            <Image
+              src={img}
+              alt={`Gallery Image ${i + 1}`}
+              fill
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
           </motion.div>
         ))}
       </div>
+
+      {/* Sentinel auto-loads the next batch; button is the manual fallback. */}
+      {hasMore && (
+        <div ref={sentinelRef} className="flex justify-center py-10">
+          <button
+            onClick={loadMore}
+            className="px-6 py-3 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
+          >
+            Load more ({images.length - visibleCount} left)
+          </button>
+        </div>
+      )}
 
       <AnimatePresence>
         {activeIndex !== null && (
